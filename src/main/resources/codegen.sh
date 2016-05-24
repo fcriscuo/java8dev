@@ -1,0 +1,1 @@
+ java -cp jooq-3.8.1.jar:jooq-meta-3.8.1.jar:jooq-codegen-3.8.1.jar:h2-1.4.191.jar:. org.jooq.util.GenerationTool ./codegen.xml

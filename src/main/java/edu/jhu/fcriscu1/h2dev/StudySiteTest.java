@@ -2,9 +2,12 @@ package edu.jhu.fcriscu1.h2dev;
 
 
 import lombok.extern.log4j.Log4j;
-import org.jooq.Record;
-import org.jooq.Result;
+import org.jooq.*;
 import org.jooq.impl.DSL;
+import org.jooq.impl.DefaultConfiguration;
+import org.nygenome.cdrn.nyc.sitestudy.h2.generated.Keys;
+import org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.CohortStudySite;
+import org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.records.CohortStudySiteRecord;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -14,7 +17,7 @@ import java.sql.Statement;
  * Created by fcriscuolo on 5/23/16.
  */
 @Log4j
-public class H2ConnectionTest {
+public class StudySiteTest {
     // JDBC driver name and database URL
     static final String JDBC_DRIVER = "org.h2.Driver";
   // connect using TCP connection
@@ -30,18 +33,27 @@ public class H2ConnectionTest {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        String testSql = "select * from cohort_study";
+
         try( Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);){
-
-            log.info("Connected database successfully...");
-            Result<Record> result =
-                    DSL.using(conn)
-                            .fetch(testSql);
-            result.stream().forEach((record)-> {
-                String studyCode = (String)record.getValue("STUDY_CODE");
-                log.info(studyCode);
-
-            });
+            // create some cohort_study_site records
+            DSLContext create = DSL.using(conn, SQLDialect.H2);
+            CohortStudySiteRecord ss1 = create.newRecord(CohortStudySite.COHORT_STUDY_SITE);
+            ss1.setCohortStudyId(1L);
+            ss1.setSiteCode("TEST_HS3");
+            ss1.store();
+            Long id1 = ss1.getCohortStudySiteId();
+            CohortStudySiteRecord ss2 = create.newRecord(CohortStudySite.COHORT_STUDY_SITE);
+            ss2.setCohortStudyId(1L);
+            ss2.setSiteCode("TEST_HS4");
+            ss2.store();
+            Long id2 = ss2.getCohortStudySiteId();
+            CohortStudySiteRecord ss3 = create.newRecord(CohortStudySite.COHORT_STUDY_SITE);
+            ss3.setCohortStudyId(1L);
+            ss3.setSiteCode("TEST_HS5");
+            ss3.store();
+            Long id3 = ss3.getCohortStudySiteId();
+            // retrieve the cohort study metadata record
+            log.info("cohort study id = " +ss3.fetchParent(Keys.CONSTRAINT_E1).getCohortStudyId());
 
 
         }catch (Exception e) {
