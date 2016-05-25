@@ -10,7 +10,6 @@ import org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.CohortStudyMeta;
 import org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.CohortStudyPatient;
 import org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.CohortStudySite;
 import org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.CohortStudySiteEhr;
-import org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.StudyMap;
 
 
 /**
@@ -27,9 +26,9 @@ import org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.StudyMap;
 public class Tables {
 
     /**
-     * The table <code>COHORT_STUDY.COHORT_STUDY_SITE</code>.
+     * The table <code>COHORT_STUDY.COHORT_STUDY_META</code>.
      */
-    public static final CohortStudySite COHORT_STUDY_SITE = org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.CohortStudySite.COHORT_STUDY_SITE;
+    public static final CohortStudyMeta COHORT_STUDY_META = org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.CohortStudyMeta.COHORT_STUDY_META;
 
     /**
      * The table <code>COHORT_STUDY.COHORT_STUDY_PATIENT</code>.
@@ -42,12 +41,7 @@ public class Tables {
     public static final CohortStudySiteEhr COHORT_STUDY_SITE_EHR = org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.CohortStudySiteEhr.COHORT_STUDY_SITE_EHR;
 
     /**
-     * The table <code>COHORT_STUDY.STUDY_MAP</code>.
+     * The table <code>COHORT_STUDY.COHORT_STUDY_SITE</code>.
      */
-    public static final StudyMap STUDY_MAP = org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.StudyMap.STUDY_MAP;
-
-    /**
-     * The table <code>COHORT_STUDY.COHORT_STUDY_META</code>.
-     */
-    public static final CohortStudyMeta COHORT_STUDY_META = org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.CohortStudyMeta.COHORT_STUDY_META;
+    public static final CohortStudySite COHORT_STUDY_SITE = org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.CohortStudySite.COHORT_STUDY_SITE;
 }

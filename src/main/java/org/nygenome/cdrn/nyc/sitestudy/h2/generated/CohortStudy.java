@@ -18,7 +18,6 @@ import org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.CohortStudyMeta;
 import org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.CohortStudyPatient;
 import org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.CohortStudySite;
 import org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.CohortStudySiteEhr;
-import org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.StudyMap;
 
 
 /**
@@ -34,7 +33,7 @@ import org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.StudyMap;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class CohortStudy extends SchemaImpl {
 
-    private static final long serialVersionUID = -1216355412;
+    private static final long serialVersionUID = -1889973387;
 
     /**
      * The reference instance of <code>COHORT_STUDY</code>
@@ -42,9 +41,9 @@ public class CohortStudy extends SchemaImpl {
     public static final CohortStudy COHORT_STUDY = new CohortStudy();
 
     /**
-     * The table <code>COHORT_STUDY.COHORT_STUDY_SITE</code>.
+     * The table <code>COHORT_STUDY.COHORT_STUDY_META</code>.
      */
-    public final CohortStudySite COHORT_STUDY_SITE = org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.CohortStudySite.COHORT_STUDY_SITE;
+    public final CohortStudyMeta COHORT_STUDY_META = org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.CohortStudyMeta.COHORT_STUDY_META;
 
     /**
      * The table <code>COHORT_STUDY.COHORT_STUDY_PATIENT</code>.
@@ -57,14 +56,9 @@ public class CohortStudy extends SchemaImpl {
     public final CohortStudySiteEhr COHORT_STUDY_SITE_EHR = org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.CohortStudySiteEhr.COHORT_STUDY_SITE_EHR;
 
     /**
-     * The table <code>COHORT_STUDY.STUDY_MAP</code>.
+     * The table <code>COHORT_STUDY.COHORT_STUDY_SITE</code>.
      */
-    public final StudyMap STUDY_MAP = org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.StudyMap.STUDY_MAP;
-
-    /**
-     * The table <code>COHORT_STUDY.COHORT_STUDY_META</code>.
-     */
-    public final CohortStudyMeta COHORT_STUDY_META = org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.CohortStudyMeta.COHORT_STUDY_META;
+    public final CohortStudySite COHORT_STUDY_SITE = org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.CohortStudySite.COHORT_STUDY_SITE;
 
     /**
      * No further instances allowed
@@ -91,8 +85,8 @@ public class CohortStudy extends SchemaImpl {
 
     private final List<Sequence<?>> getSequences0() {
         return Arrays.<Sequence<?>>asList(
-            Sequences.SYSTEM_SEQUENCE_5C2762A0_50E5_4CC8_AC43_1FA4816B173C,
-            Sequences.SYSTEM_SEQUENCE_C2178153_B327_4F26_8356_5F481C0D6678);
+            Sequences.SYSTEM_SEQUENCE_F3019A80_83DC_4C90_92E0_17AC79AD05B8,
+            Sequences.SYSTEM_SEQUENCE_FB792871_2314_4592_892A_79BB856C458E);
     }
 
     @Override
@@ -104,10 +98,9 @@ public class CohortStudy extends SchemaImpl {
 
     private final List<Table<?>> getTables0() {
         return Arrays.<Table<?>>asList(
-            CohortStudySite.COHORT_STUDY_SITE,
+            CohortStudyMeta.COHORT_STUDY_META,
             CohortStudyPatient.COHORT_STUDY_PATIENT,
             CohortStudySiteEhr.COHORT_STUDY_SITE_EHR,
-            StudyMap.STUDY_MAP,
-            CohortStudyMeta.COHORT_STUDY_META);
+            CohortStudySite.COHORT_STUDY_SITE);
     }
 }
