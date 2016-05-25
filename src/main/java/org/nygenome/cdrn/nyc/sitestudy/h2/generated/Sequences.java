@@ -24,12 +24,12 @@ import org.jooq.impl.SequenceImpl;
 public class Sequences {
 
     /**
-     * The sequence <code>COHORT_STUDY.SYSTEM_SEQUENCE_5C2762A0_50E5_4CC8_AC43_1FA4816B173C</code>
+     * The sequence <code>COHORT_STUDY.SYSTEM_SEQUENCE_F3019A80_83DC_4C90_92E0_17AC79AD05B8</code>
      */
-    public static final Sequence<Long> SYSTEM_SEQUENCE_5C2762A0_50E5_4CC8_AC43_1FA4816B173C = new SequenceImpl<Long>("SYSTEM_SEQUENCE_5C2762A0_50E5_4CC8_AC43_1FA4816B173C", CohortStudy.COHORT_STUDY, org.jooq.impl.SQLDataType.BIGINT);
+    public static final Sequence<Long> SYSTEM_SEQUENCE_F3019A80_83DC_4C90_92E0_17AC79AD05B8 = new SequenceImpl<Long>("SYSTEM_SEQUENCE_F3019A80_83DC_4C90_92E0_17AC79AD05B8", CohortStudy.COHORT_STUDY, org.jooq.impl.SQLDataType.BIGINT);
 
     /**
-     * The sequence <code>COHORT_STUDY.SYSTEM_SEQUENCE_C2178153_B327_4F26_8356_5F481C0D6678</code>
+     * The sequence <code>COHORT_STUDY.SYSTEM_SEQUENCE_FB792871_2314_4592_892A_79BB856C458E</code>
      */
-    public static final Sequence<Long> SYSTEM_SEQUENCE_C2178153_B327_4F26_8356_5F481C0D6678 = new SequenceImpl<Long>("SYSTEM_SEQUENCE_C2178153_B327_4F26_8356_5F481C0D6678", CohortStudy.COHORT_STUDY, org.jooq.impl.SQLDataType.BIGINT);
+    public static final Sequence<Long> SYSTEM_SEQUENCE_FB792871_2314_4592_892A_79BB856C458E = new SequenceImpl<Long>("SYSTEM_SEQUENCE_FB792871_2314_4592_892A_79BB856C458E", CohortStudy.COHORT_STUDY, org.jooq.impl.SQLDataType.BIGINT);
 }

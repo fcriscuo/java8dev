@@ -35,7 +35,7 @@ import org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.records.CohortStudyMe
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class CohortStudyMeta extends TableImpl<CohortStudyMetaRecord> {
 
-    private static final long serialVersionUID = -305672546;
+    private static final long serialVersionUID = -288716902;
 
     /**
      * The reference instance of <code>COHORT_STUDY.COHORT_STUDY_META</code>
@@ -53,7 +53,7 @@ public class CohortStudyMeta extends TableImpl<CohortStudyMetaRecord> {
     /**
      * The column <code>COHORT_STUDY.COHORT_STUDY_META.COHORT_STUDY_ID</code>.
      */
-    public final TableField<CohortStudyMetaRecord, Long> COHORT_STUDY_ID = createField("COHORT_STUDY_ID", org.jooq.impl.SQLDataType.BIGINT.nullable(false).defaultValue(org.jooq.impl.DSL.field("(NEXT VALUE FOR COHORT_STUDY.SYSTEM_SEQUENCE_5C2762A0_50E5_4CC8_AC43_1FA4816B173C)", org.jooq.impl.SQLDataType.BIGINT)), this, "");
+    public final TableField<CohortStudyMetaRecord, Long> COHORT_STUDY_ID = createField("COHORT_STUDY_ID", org.jooq.impl.SQLDataType.BIGINT.nullable(false).defaultValue(org.jooq.impl.DSL.field("(NEXT VALUE FOR COHORT_STUDY.SYSTEM_SEQUENCE_FB792871_2314_4592_892A_79BB856C458E)", org.jooq.impl.SQLDataType.BIGINT)), this, "");
 
     /**
      * The column <code>COHORT_STUDY.COHORT_STUDY_META.STUDY_ID</code>.
@@ -88,7 +88,7 @@ public class CohortStudyMeta extends TableImpl<CohortStudyMetaRecord> {
     /**
      * The column <code>COHORT_STUDY.COHORT_STUDY_META.STUDY_REG_DATE</code>.
      */
-    public final TableField<CohortStudyMetaRecord, Date> STUDY_REG_DATE = createField("STUDY_REG_DATE", org.jooq.impl.SQLDataType.DATE, this, "");
+    public final TableField<CohortStudyMetaRecord, Date> STUDY_REG_DATE = createField("STUDY_REG_DATE", org.jooq.impl.SQLDataType.DATE.defaultValue(org.jooq.impl.DSL.field("CURRENT_DATE()", org.jooq.impl.SQLDataType.DATE)), this, "");
 
     /**
      * The column <code>COHORT_STUDY.COHORT_STUDY_META.STUDY_MAX_DAYS</code>.
@@ -96,14 +96,14 @@ public class CohortStudyMeta extends TableImpl<CohortStudyMetaRecord> {
     public final TableField<CohortStudyMetaRecord, Integer> STUDY_MAX_DAYS = createField("STUDY_MAX_DAYS", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
+     * The column <code>COHORT_STUDY.COHORT_STUDY_META.PENDING</code>.
+     */
+    public final TableField<CohortStudyMetaRecord, Boolean> PENDING = createField("PENDING", org.jooq.impl.SQLDataType.BOOLEAN.defaultValue(org.jooq.impl.DSL.field("TRUE", org.jooq.impl.SQLDataType.BOOLEAN)), this, "");
+
+    /**
      * The column <code>COHORT_STUDY.COHORT_STUDY_META.STUDY_SQL_QUERY</code>.
      */
     public final TableField<CohortStudyMetaRecord, String> STUDY_SQL_QUERY = createField("STUDY_SQL_QUERY", org.jooq.impl.SQLDataType.VARCHAR.length(256), this, "");
-
-    /**
-     * The column <code>COHORT_STUDY.COHORT_STUDY_META.PENDING</code>.
-     */
-    public final TableField<CohortStudyMetaRecord, Boolean> PENDING = createField("PENDING", org.jooq.impl.SQLDataType.BOOLEAN.defaultValue(org.jooq.impl.DSL.field("FALSE", org.jooq.impl.SQLDataType.BOOLEAN)), this, "");
 
     /**
      * Create a <code>COHORT_STUDY.COHORT_STUDY_META</code> table reference
@@ -148,7 +148,7 @@ public class CohortStudyMeta extends TableImpl<CohortStudyMetaRecord> {
      */
     @Override
     public UniqueKey<CohortStudyMetaRecord> getPrimaryKey() {
-        return Keys.CONSTRAINT_B;
+        return Keys.CONSTRAINT_E;
     }
 
     /**
@@ -156,7 +156,7 @@ public class CohortStudyMeta extends TableImpl<CohortStudyMetaRecord> {
      */
     @Override
     public List<UniqueKey<CohortStudyMetaRecord>> getKeys() {
-        return Arrays.<UniqueKey<CohortStudyMetaRecord>>asList(Keys.CONSTRAINT_B);
+        return Arrays.<UniqueKey<CohortStudyMetaRecord>>asList(Keys.CONSTRAINT_E);
     }
 
     /**

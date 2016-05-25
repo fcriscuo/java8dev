@@ -35,7 +35,7 @@ import org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.records.CohortStudySi
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class CohortStudySite extends TableImpl<CohortStudySiteRecord> {
 
-    private static final long serialVersionUID = 947751318;
+    private static final long serialVersionUID = 1554460071;
 
     /**
      * The reference instance of <code>COHORT_STUDY.COHORT_STUDY_SITE</code>
@@ -53,7 +53,7 @@ public class CohortStudySite extends TableImpl<CohortStudySiteRecord> {
     /**
      * The column <code>COHORT_STUDY.COHORT_STUDY_SITE.COHORT_STUDY_SITE_ID</code>.
      */
-    public final TableField<CohortStudySiteRecord, Long> COHORT_STUDY_SITE_ID = createField("COHORT_STUDY_SITE_ID", org.jooq.impl.SQLDataType.BIGINT.nullable(false).defaultValue(org.jooq.impl.DSL.field("(NEXT VALUE FOR COHORT_STUDY.SYSTEM_SEQUENCE_C2178153_B327_4F26_8356_5F481C0D6678)", org.jooq.impl.SQLDataType.BIGINT)), this, "");
+    public final TableField<CohortStudySiteRecord, Long> COHORT_STUDY_SITE_ID = createField("COHORT_STUDY_SITE_ID", org.jooq.impl.SQLDataType.BIGINT.nullable(false).defaultValue(org.jooq.impl.DSL.field("(NEXT VALUE FOR COHORT_STUDY.SYSTEM_SEQUENCE_F3019A80_83DC_4C90_92E0_17AC79AD05B8)", org.jooq.impl.SQLDataType.BIGINT)), this, "");
 
     /**
      * The column <code>COHORT_STUDY.COHORT_STUDY_SITE.COHORT_STUDY_ID</code>.
@@ -108,7 +108,7 @@ public class CohortStudySite extends TableImpl<CohortStudySiteRecord> {
      */
     @Override
     public UniqueKey<CohortStudySiteRecord> getPrimaryKey() {
-        return Keys.CONSTRAINT_E;
+        return Keys.CONSTRAINT_E1;
     }
 
     /**
@@ -116,7 +116,7 @@ public class CohortStudySite extends TableImpl<CohortStudySiteRecord> {
      */
     @Override
     public List<UniqueKey<CohortStudySiteRecord>> getKeys() {
-        return Arrays.<UniqueKey<CohortStudySiteRecord>>asList(Keys.CONSTRAINT_E);
+        return Arrays.<UniqueKey<CohortStudySiteRecord>>asList(Keys.CONSTRAINT_E1);
     }
 
     /**
@@ -124,7 +124,7 @@ public class CohortStudySite extends TableImpl<CohortStudySiteRecord> {
      */
     @Override
     public List<ForeignKey<CohortStudySiteRecord, ?>> getReferences() {
-        return Arrays.<ForeignKey<CohortStudySiteRecord, ?>>asList(Keys.CONSTRAINT_E1);
+        return Arrays.<ForeignKey<CohortStudySiteRecord, ?>>asList(Keys.CONSTRAINT_E13);
     }
 
     /**

@@ -10,6 +10,7 @@ import java.util.List;
 import javax.annotation.Generated;
 
 import org.jooq.Field;
+import org.jooq.ForeignKey;
 import org.jooq.Schema;
 import org.jooq.Table;
 import org.jooq.TableField;
@@ -33,7 +34,7 @@ import org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.records.CohortStudySi
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class CohortStudySiteEhr extends TableImpl<CohortStudySiteEhrRecord> {
 
-    private static final long serialVersionUID = -659283889;
+    private static final long serialVersionUID = 2019182770;
 
     /**
      * The reference instance of <code>COHORT_STUDY.COHORT_STUDY_SITE_EHR</code>
@@ -62,6 +63,11 @@ public class CohortStudySiteEhr extends TableImpl<CohortStudySiteEhrRecord> {
      * The column <code>COHORT_STUDY.COHORT_STUDY_SITE_EHR.COHORT_STUDY_SITE_ID</code>.
      */
     public final TableField<CohortStudySiteEhrRecord, Long> COHORT_STUDY_SITE_ID = createField("COHORT_STUDY_SITE_ID", org.jooq.impl.SQLDataType.BIGINT.nullable(false), this, "");
+
+    /**
+     * The column <code>COHORT_STUDY.COHORT_STUDY_SITE_EHR.SS_ID</code>.
+     */
+    public final TableField<CohortStudySiteEhrRecord, String> SS_ID = createField("SS_ID", org.jooq.impl.SQLDataType.VARCHAR.length(200), this, "");
 
     /**
      * Create a <code>COHORT_STUDY.COHORT_STUDY_SITE_EHR</code> table reference
@@ -107,6 +113,14 @@ public class CohortStudySiteEhr extends TableImpl<CohortStudySiteEhrRecord> {
     @Override
     public List<UniqueKey<CohortStudySiteEhrRecord>> getKeys() {
         return Arrays.<UniqueKey<CohortStudySiteEhrRecord>>asList(Keys.CONSTRAINT_5);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public List<ForeignKey<CohortStudySiteEhrRecord, ?>> getReferences() {
+        return Arrays.<ForeignKey<CohortStudySiteEhrRecord, ?>>asList(Keys.CONSTRAINT_5D2);
     }
 
     /**
