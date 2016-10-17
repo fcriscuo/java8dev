@@ -12,6 +12,7 @@ public interface Computable {
     default implementations
     new comments
     another change
+    and another change for a commit
      */
 
     public default int doubleNumber( int num) {
