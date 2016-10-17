@@ -11,70 +11,29 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: com.h2database:h2:1.4.190" level="project" />
-    <orderEntry type="library" name="Maven: org.jooq:jooq:3.8.1" level="project" />
-    <orderEntry type="library" name="Maven: com.aol.cyclops:cyclops-all:7.2.3" level="project" />
-    <orderEntry type="library" name="Maven: com.aol.cyclops:cyclops-streams:7.2.3" level="project" />
-    <orderEntry type="library" name="Maven: com.aol.cyclops:cyclops-for-comprehensions:7.2.3" level="project" />
-    <orderEntry type="library" name="Maven: com.aol.cyclops:cyclops-monad-api:7.2.3" level="project" />
-    <orderEntry type="library" name="Maven: org.pcollections:pcollections:2.1.2" level="project" />
-    <orderEntry type="library" name="Maven: com.aol.cyclops:cyclops-sequence-api:7.2.3" level="project" />
-    <orderEntry type="library" name="Maven: com.aol.cyclops:cyclops-closures:7.2.3" level="project" />
-    <orderEntry type="library" name="Maven: uk.co.real-logic:Agrona:0.4.12" level="project" />
-    <orderEntry type="library" name="Maven: com.aol.cyclops:cyclops-invokedynamic:7.2.3" level="project" />
-    <orderEntry type="library" name="Maven: org.jooq:jool:0.9.10" level="project" />
-    <orderEntry type="library" name="Maven: org.reactivestreams:reactive-streams:1.0.0" level="project" />
-    <orderEntry type="library" name="Maven: com.aol.cyclops:cyclops-tuples:7.2.3" level="project" />
-    <orderEntry type="library" name="Maven: com.aol.cyclops:cyclops-core:7.2.3" level="project" />
-    <orderEntry type="library" name="Maven: com.aol.cyclops:cyclops-feature-toggle:7.2.3" level="project" />
-    <orderEntry type="library" name="Maven: com.aol.cyclops:cyclops-validation:7.2.3" level="project" />
-    <orderEntry type="library" name="Maven: com.aol.cyclops:cyclops-functions:7.2.3" level="project" />
-    <orderEntry type="library" name="Maven: com.aol.cyclops:cyclops-pattern-matching:7.2.3" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:jcl-over-slf4j:1.7.13" level="project" />
-    <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-all:1.3" level="project" />
-    <orderEntry type="library" name="Maven: com.aol.cyclops:cyclops-monad-functions:7.2.3" level="project" />
-    <orderEntry type="library" name="Maven: com.aol.cyclops:cyclops-pattern-matching-recursive:7.2.3" level="project" />
-    <orderEntry type="library" name="Maven: com.aol.cyclops:cyclops-trampoline:7.2.3" level="project" />
-    <orderEntry type="library" name="Maven: com.aol.cyclops:cyclops-mixins:7.2.3" level="project" />
-    <orderEntry type="library" name="Maven: com.aol.cyclops:cyclops-pattern-matching-collections:7.2.3" level="project" />
-    <orderEntry type="library" name="Maven: com.nurkiewicz.lazyseq:lazyseq:0.0.1" level="project" />
-    <orderEntry type="library" name="Maven: com.aol.cyclops:cyclops-try:7.2.3" level="project" />
-    <orderEntry type="library" name="Maven: com.aol.simplereact:cyclops-react:1.0.0-RC2.3" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.13" level="project" />
-    <orderEntry type="library" name="Maven: com.nurkiewicz.asyncretry:asyncretry:0.0.7" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.immutables:value:2.1.16" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.commons:commons-email:1.4" level="project" />
-    <orderEntry type="library" name="Maven: com.sun.mail:javax.mail:1.5.2" level="project" />
-    <orderEntry type="library" name="Maven: javax.activation:activation:1.1.1" level="project" />
-    <orderEntry type="library" name="Maven: org.xeustechnologies:jtar:1.1" level="project" />
     <orderEntry type="library" name="Maven: com.typesafe:config:1.3.0" level="project" />
-    <orderEntry type="library" name="Maven: io.javaslang:javaslang:2.0.2" level="project" />
-    <orderEntry type="library" name="Maven: io.javaslang:javaslang-match:2.0.2" level="project" />
-    <orderEntry type="library" name="Maven: io.javaslang:javaslang-jackson:2.0.2" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.6.5" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.6.0" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.7.3" level="project" />
+    <orderEntry type="library" name="Maven: com.google.dagger:dagger:2.0.1" level="project" />
+    <orderEntry type="library" name="Maven: javax.inject:javax.inject:1" level="project" />
+    <orderEntry type="library" name="Maven: com.google.dagger:dagger-compiler:2.0" level="project" />
+    <orderEntry type="library" name="Maven: com.google.dagger:dagger-producers:2.0-beta" level="project" />
+    <orderEntry type="library" name="Maven: com.javaslang:javaslang:2.0.4" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.projectlombok:lombok:1.16.6" level="project" />
     <orderEntry type="library" name="Maven: com.beust:jcommander:1.48" level="project" />
-    <orderEntry type="library" name="Maven: com.goldmansachs:gs-collections-api:7.0.0" level="project" />
-    <orderEntry type="library" name="Maven: com.goldmansachs:gs-collections:7.0.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: com.goldmansachs:gs-collections-testutils:7.0.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: commons-codec:commons-codec:1.10" level="project" />
+    <orderEntry type="library" name="Maven: com.goldmansachs:gs-collections:5.1.0" level="project" />
+    <orderEntry type="library" name="Maven: com.goldmansachs:gs-collections-api:5.1.0" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:guava:19.0-rc3" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.0" level="project" />
     <orderEntry type="library" name="Maven: junit:junit:4.12" level="project" />
     <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
-    <orderEntry type="library" name="Maven: com.goldmansachs:gs-collections-forkjoin:7.0.0" level="project" />
-    <orderEntry type="library" name="Maven: com.google.guava:guava:19.0" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.0" level="project" />
     <orderEntry type="library" name="Maven: org.functionaljava:functionaljava:4.4" level="project" />
     <orderEntry type="library" name="Maven: org.functionaljava:functionaljava-java8:4.4" level="project" />
     <orderEntry type="library" name="Maven: org.functionaljava:functionaljava-quickcheck:4.4" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.34" level="project" />
     <orderEntry type="library" name="Maven: log4j:log4j:1.2.17" level="project" />
     <orderEntry type="library" name="Maven: com.google.auto.value:auto-value:1.1" level="project" />
-    <orderEntry type="library" name="Maven: com.google.dagger:dagger:2.0.1" level="project" />
-    <orderEntry type="library" name="Maven: javax.inject:javax.inject:1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-csv:1.0" level="project" />
-    <orderEntry type="library" name="Maven: io.reactivex:rxjava-string:1.1.0" level="project" />
-    <orderEntry type="library" name="Maven: io.reactivex:rxjava:1.1.2" level="project" />
+    <orderEntry type="library" name="Maven: com.netflix.rxjava:rxjava-string:0.20.7" level="project" />
+    <orderEntry type="library" name="Maven: com.netflix.rxjava:rxjava-core:0.20.7" level="project" />
+    <orderEntry type="library" name="Maven: io.reactivex:rxjava:1.0.10" level="project" />
   </component>
 </module>
