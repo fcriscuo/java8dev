@@ -10,6 +10,7 @@ public interface Computable {
 
     /*
     default implementations
+    new comments
      */
 
     public default int doubleNumber( int num) {
