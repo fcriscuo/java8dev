@@ -34,9 +34,9 @@ public class StudySiteTest {
             e.printStackTrace();
         }
 
-        try( Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);){
+        try{
             // create some cohort_study_site records
-            DSLContext create = DSL.using(conn, SQLDialect.H2);
+            DSLContext create = CohortStudyContextService.INSTANCE.dslContext().get();
             CohortStudySiteRecord ss1 = create.newRecord(CohortStudySite.COHORT_STUDY_SITE);
             ss1.setCohortStudyId(1L);
             ss1.setSiteCode("TEST_HS3");
@@ -53,7 +53,7 @@ public class StudySiteTest {
             ss3.store();
             Long id3 = ss3.getCohortStudySiteId();
             // retrieve the cohort study metadata record
-            log.info("cohort study id = " +ss3.fetchParent(Keys.CONSTRAINT_E1).getCohortStudyId());
+            log.info("cohort study id = " +ss3.fetchParent(Keys.CONSTRAINT_E13).getCohortStudyId());
 
 
         }catch (Exception e) {

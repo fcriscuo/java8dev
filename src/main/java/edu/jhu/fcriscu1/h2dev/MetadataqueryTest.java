@@ -6,8 +6,7 @@ import org.jooq.*;
 import org.jooq.impl.DSL;
 import org.jooq.impl.DefaultConfiguration;
 
-import org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.daos.CohortStudyMetaDao;
-import org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.pojos.CohortStudyMeta;
+import org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.CohortStudyMeta;
 import org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.records.CohortStudyMetaRecord;
 
 
@@ -37,18 +36,18 @@ public class MetadataqueryTest {
             e.printStackTrace();
         }
         String testSql = "select * from cohort_study";
-        try( Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);){
-            Configuration configuration = new DefaultConfiguration().set(conn).set(SQLDialect.H2);
-            CohortStudyMetaDao metaDao = new CohortStudyMetaDao(configuration);
-           List<CohortStudyMeta> metaList= metaDao.fetchByPending(true);
-            log.info("Found " +metaList.size() +" pending cohort studies");
-            metaList.stream().forEach( (md) -> log.info (md.toString()));
-            DSLContext create = DSL.using(conn, SQLDialect.H2);
-            CohortStudyMetaRecord record = create.newRecord(org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.CohortStudyMeta.COHORT_STUDY_META);
+        try{
+           DSLContext context = CohortStudyContextService.INSTANCE.dslContext().get();
 
+            context.select().from(CohortStudyMeta.COHORT_STUDY_META).where(CohortStudyMeta.COHORT_STUDY_META.PENDING.eq(true)
+                        .and(CohortStudyMeta.COHORT_STUDY_META.STUDY_MAX_DAYS.ge(14)))
+                    .stream().map((record) -> (CohortStudyMetaRecord) record)
+                    .forEach((meta) ->System.out.println("Study code: " +meta.getStudyCode() + " " +meta.getStudyOriginContactInfo()));
+
+            CohortStudyMetaRecord record = context.newRecord(org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.CohortStudyMeta.COHORT_STUDY_META);
             record.setPending(true);
-            record.setStudyCode("Study_Code_24May2016");
-            record.setStudyMaxDays(0);
+            record.setStudyCode("Study_Code_25May2016");
+            record.setStudyMaxDays(100);
             record.setStudyOriginContactInfo("John Smith, DNA Lab (212) 555-1212");
             record.setStudyOriginEmail("jsmith@gmail.com");
             record.setStudyOriginSiteCode("TEST_HS11");
@@ -59,10 +58,10 @@ public class MetadataqueryTest {
             Long id = record.getCohortStudyId();
             log.info("CohortStudyMeta  row inserted id " +id.toString());
             // update an existing record
-            CohortStudyMetaRecord meta2  =create.fetchOne(org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.CohortStudyMeta.COHORT_STUDY_META,
+            CohortStudyMetaRecord meta2  =context.fetchOne(org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.CohortStudyMeta.COHORT_STUDY_META,
                     org.nygenome.cdrn.nyc.sitestudy.h2.generated.tables.CohortStudyMeta.COHORT_STUDY_META.COHORT_STUDY_ID.eq(1L));
             log.info("retrieved " + meta2.getStudyOriginContactInfo());
-            meta2.setStudyOriginContactInfo("Mary Hopkins, Hematology, Cornell");
+            meta2.setStudyOriginContactInfo("Patty Griffin, Hematology, WCMC");
             meta2.store();
 
 
