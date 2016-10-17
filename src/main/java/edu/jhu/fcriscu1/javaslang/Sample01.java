@@ -1,6 +1,7 @@
 package edu.jhu.fcriscu1.javaslang;
 
 
+
 import javaslang.*;
 import javaslang.collection.List;
 import javaslang.collection.Stream;
@@ -21,10 +22,17 @@ import static javaslang.Patterns.None;
 import static javaslang.Patterns.Some;
 
 
+import javaslang.collection.List;
+import org.apache.log4j.Logger;
+import java.util.function.Consumer;
+
+
+
 /**
  * Created by fcriscuo on 2/15/16.
  */
 public class Sample01 {
+
 
     public Sample01() {}
 
@@ -42,12 +50,14 @@ public class Sample01 {
             Function3.of(this::addThree);
 
 
+
     public static final Logger logger = Logger.getLogger(Sample01.class);
 
     static Consumer<String> infoConsumer = (s) -> {
         if(logger.isInfoEnabled()){
            logger.info(s);
         }
+
         out.println(s);
     };
 
@@ -58,12 +68,14 @@ public class Sample01 {
         return first + second;
     }
 
+
     public static void main(String... args) {
-        Sample01 test = new Sample01();
+
         List<Integer> list01 = List.of(1,2,3);
         List<Integer> list02 = list01.tail().prepend(0);
         infoConsumer.accept(list01.toString());
         infoConsumer.accept(list02.toString());
+
         // = List(1, 2, 3)
         Function2<Integer, Integer, Integer> divide = (a, b) -> a / b;
         Function2<Integer, Integer, Option<Integer>> safeDivide = Function2.lift(divide);
@@ -110,7 +122,7 @@ public class Sample01 {
         );
         System.out.println(status);
 
-        test.performTests();
+
 
 
 
